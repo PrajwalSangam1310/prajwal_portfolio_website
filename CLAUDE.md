@@ -30,6 +30,9 @@ The website uses a content-driven approach where specifications are maintained i
 - `project_data.txt` - Google Drive links and YouTube URLs for project media
 - `projects_summary_detailed.txt` - Detailed project descriptions and achievements
 - `my_context.txt` - Personal background and career objectives
+- `hobbies_interests_guidelines.md` - Content specifications for personal interests
+- `documenting_my_learnings.md` - Learning framework documentation with Miro board links
+- `my_data.txt` - External profile links and contact information
 
 ## Key Features & Functionality
 
@@ -40,11 +43,27 @@ The website uses a content-driven approach where specifications are maintained i
   - **Blue (#1e40af)**: Robotics & Hardware skills
   - **Green (#166534)**: Software & Development skills  
   - **Purple (#7c2d12)**: Product Management skills
+- Image carousel for multiple project images
+- Miro board integration for research process documentation
 
 ### Experience Timeline
 - Professional timeline with hover effects
 - Categorized achievements and skill tags
 - Responsive design for mobile/desktop
+
+### Learning Hub Section
+- Three documented framework boards displayed as interactive cards
+- Miro board integration for:
+  - Lean Customer Development process
+  - Problem Framing Canvas methodology
+  - Jobs to Be Done (ODI Method) framework
+- External links to live Miro boards with research documentation
+
+### Hobbies & Interests Section
+- **Reading Habit**: Masonry grid display of book covers with Goodreads integration
+- **Writing**: Medium profile integration with article highlights
+- **Love for Art**: Masonry gallery showcasing personal artwork with Pinterest integration
+- All sections include direct links to external profiles and platforms
 
 ### Dynamic Skill Categorization
 The `skillCategories` object in `script.js` automatically categorizes and color-codes all skill tags throughout the site based on domain expertise.
@@ -78,12 +97,26 @@ Simply open `index.html` in any modern web browser - no build process required.
 - Modify relevant files in `txt_guides/` for content specifications
 - Update experience data in `experience_section_contents.txt`
 - Add new project media to `project_data.txt`
+- Update hobbies content in `hobbies_interests_guidelines.md`
+- Update learning documentation links in `documenting_my_learnings.md`
+- Personal data and external links in `my_data.txt`
 
 ### Asset Management
 - **Project images**: `resources/project-images/{project-name}/`
+- **Book covers**: `resources/books images/` - Book cover images for reading section
+- **Artwork**: `resources/art_work/` - Personal artwork displayed in masonry gallery
 - **Thumbnails**: Used for project card displays
 - **Media organization**: Separate folders for different project types
 - **Image optimization**: Maintain consistent aspect ratios
+
+### External Integrations
+- **Miro Boards**: Direct links to research process documentation
+- **Goodreads Profile**: Book collection and reading history
+- **Medium Profile**: Published articles and writing samples
+- **Pinterest Profile**: Artwork gallery and creative portfolio
+- **LinkedIn**: Professional networking and career information
+- **GitHub**: Technical projects and code repositories
+- **Email**: Direct contact integration with mailto: links
 
 ## Target Audience Context
 
