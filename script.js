@@ -649,6 +649,12 @@ const projectData = {
                 title: "Personal Insights Dashboard",
                 description: "My Learnings feature providing users with personalized insights about their music preferences and listening patterns",
                 url: "resources/project-images/spotify_figma_images/my_learnings.png"
+            },
+            {
+                type: "miro",
+                title: "Design Process & Research Framework",
+                description: "Complete product management methodology showcasing user research, JTBD framework application, competitive analysis, and strategic problem-solving approach used to develop these Spotify feature solutions.",
+                url: "https://miro.com/app/live-embed/uXjVIlqQ_Eg=/?embedAutoplay=1"
             }
         ]
     }
@@ -707,45 +713,14 @@ function populateModal(project) {
         badgesContainer.appendChild(badgeElement);
     });
     
-    // Populate description
-    document.getElementById('modalDescription').textContent = project.description;
-    
-    // Populate contributions
-    const contributionsList = document.getElementById('modalContributions');
-    contributionsList.innerHTML = '';
-    project.contributions.forEach(contribution => {
-        const li = document.createElement('li');
-        li.textContent = contribution;
-        contributionsList.appendChild(li);
-    });
-    
-    // Populate skills
-    const skillsContainer = document.getElementById('modalSkills');
-    skillsContainer.innerHTML = '';
-    project.skills.forEach(skill => {
-        const skillTag = document.createElement('span');
-        const category = getSkillCategory(skill);
-        skillTag.className = `tag skill-${category}`;
-        skillTag.textContent = skill;
-        skillsContainer.appendChild(skillTag);
-    });
-    
-    // Populate impacts
-    const impactsList = document.getElementById('modalImpacts');
-    impactsList.innerHTML = '';
-    project.impacts.forEach(impact => {
-        const li = document.createElement('li');
-        li.textContent = impact;
-        impactsList.appendChild(li);
-    });
-    
-    // Populate media
+    // Populate media FIRST (visual content leads)
     const mediaContainer = document.getElementById('modalMedia');
     mediaContainer.innerHTML = '';
     
     if (project.media && project.media.length > 0) {
         const images = project.media.filter(item => item.type === 'image' && item.url);
         const videos = project.media.filter(item => item.type === 'video' && item.url);
+        const miroBoards = project.media.filter(item => item.type === 'miro' && item.url);
         
         // Create Images section
         if (images.length > 0) {
@@ -893,6 +868,56 @@ function populateModal(project) {
             mediaContainer.appendChild(imagesSection);
         }
         
+        // Create Miro Board section
+        if (miroBoards.length > 0) {
+            miroBoards.forEach(board => {
+                const miroSection = document.createElement('div');
+                miroSection.className = 'media-section miro-section';
+                
+                const miroTitle = document.createElement('h4');
+                miroTitle.textContent = board.title;
+                miroTitle.className = 'media-section-title';
+                miroSection.appendChild(miroTitle);
+                
+                const miroDescription = document.createElement('p');
+                miroDescription.textContent = board.description;
+                miroDescription.className = 'miro-description';
+                miroSection.appendChild(miroDescription);
+                
+                const miroContainer = document.createElement('div');
+                miroContainer.className = 'miro-embed-container';
+                
+                const miroEmbed = document.createElement('iframe');
+                miroEmbed.src = board.url;
+                miroEmbed.width = '100%';
+                miroEmbed.height = '500';
+                miroEmbed.frameBorder = '0';
+                miroEmbed.scrolling = 'no';
+                miroEmbed.allowFullscreen = true;
+                miroEmbed.setAttribute('allow', 'fullscreen');
+                
+                const fallbackLink = document.createElement('div');
+                fallbackLink.className = 'miro-fallback';
+                fallbackLink.innerHTML = `
+                    <p>Having trouble viewing the board? <a href="https://miro.com/app/board/uXjVIlqQ_Eg=/?share_link_id=370992304744" target="_blank" rel="noopener">Open in Miro →</a></p>
+                `;
+                
+                const fullBoardButton = document.createElement('a');
+                fullBoardButton.href = 'https://miro.com/app/board/uXjVIlqQ_Eg=/?share_link_id=370992304744';
+                fullBoardButton.target = '_blank';
+                fullBoardButton.rel = 'noopener';
+                fullBoardButton.className = 'miro-full-board-btn';
+                fullBoardButton.textContent = 'Explore Full Board on Miro →';
+                
+                miroContainer.appendChild(miroEmbed);
+                miroContainer.appendChild(fallbackLink);
+                miroContainer.appendChild(fullBoardButton);
+                
+                miroSection.appendChild(miroContainer);
+                mediaContainer.appendChild(miroSection);
+            });
+        }
+        
         // Create Videos section
         if (videos.length > 0) {
             const videosSection = document.createElement('div');
@@ -930,4 +955,37 @@ function populateModal(project) {
             mediaContainer.appendChild(videosSection);
         }
     }
+    
+    // Now populate project details AFTER visual content
+    // Populate description
+    document.getElementById('modalDescription').textContent = project.description;
+    
+    // Populate contributions
+    const contributionsList = document.getElementById('modalContributions');
+    contributionsList.innerHTML = '';
+    project.contributions.forEach(contribution => {
+        const li = document.createElement('li');
+        li.textContent = contribution;
+        contributionsList.appendChild(li);
+    });
+    
+    // Populate skills
+    const skillsContainer = document.getElementById('modalSkills');
+    skillsContainer.innerHTML = '';
+    project.skills.forEach(skill => {
+        const skillTag = document.createElement('span');
+        const category = getSkillCategory(skill);
+        skillTag.className = `tag skill-${category}`;
+        skillTag.textContent = skill;
+        skillsContainer.appendChild(skillTag);
+    });
+    
+    // Populate impacts
+    const impactsList = document.getElementById('modalImpacts');
+    impactsList.innerHTML = '';
+    project.impacts.forEach(impact => {
+        const li = document.createElement('li');
+        li.textContent = impact;
+        impactsList.appendChild(li);
+    });
 }
