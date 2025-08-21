@@ -603,9 +603,52 @@ const projectData = {
         ],
         media: [
             {
-                type: "video",
-                title: "Case Study Presentation",
-                url: "" // Add your case study presentation video URL here
+                type: "image",
+                title: "Mood Selection Interface",
+                description: "User emotional state capture system allowing users to define their current mood for personalized music recommendations",
+                url: "resources/project-images/spotify_figma_images/mood_selection_screen.png"
+            },
+            {
+                type: "image",
+                title: "Energy Level Selection",
+                description: "Activity-based music matching interface that adapts recommendations to user's current energy and activity level",
+                url: "resources/project-images/spotify_figma_images/energy selection scree.png"
+            },
+            {
+                type: "image",
+                title: "Ambient Sound Integration",
+                description: "Environmental context integration allowing users to blend music with ambient sounds for enhanced listening experience",
+                url: "resources/project-images/spotify_figma_images/ambient sound selection screen.png"
+            },
+            {
+                type: "image",
+                title: "Mood Radio Station",
+                description: "Personalized station creation based on emotional state and contextual preferences for continuous listening",
+                url: "resources/project-images/spotify_figma_images/mood_radio.png"
+            },
+            {
+                type: "image",
+                title: "Learning Nugget Feature",
+                description: "Music discovery education component that teaches users about music theory, artist backgrounds, and genre insights",
+                url: "resources/project-images/spotify_figma_images/learning nugget.png"
+            },
+            {
+                type: "image",
+                title: "Emotional Connection Hub",
+                description: "More Than a Tune feature focusing on the emotional and memory-based connections users have with their music",
+                url: "resources/project-images/spotify_figma_images/more thana tune_what we felt.png"
+            },
+            {
+                type: "image",
+                title: "Music Journal Interface",
+                description: "User reflection and tracking system allowing users to document their musical journey and emotional responses",
+                url: "resources/project-images/spotify_figma_images/music journal.png"
+            },
+            {
+                type: "image",
+                title: "Personal Insights Dashboard",
+                description: "My Learnings feature providing users with personalized insights about their music preferences and listening patterns",
+                url: "resources/project-images/spotify_figma_images/my_learnings.png"
             }
         ]
     }
@@ -710,34 +753,143 @@ function populateModal(project) {
             imagesSection.className = 'media-section';
             
             const imagesTitle = document.createElement('h4');
-            imagesTitle.textContent = 'Project Images';
+            imagesTitle.textContent = 'Feature Designs';
             imagesTitle.className = 'media-section-title';
             imagesSection.appendChild(imagesTitle);
             
-            const imagesGrid = document.createElement('div');
-            imagesGrid.className = 'images-grid';
+            // Create carousel for projects with multiple images (like Spotify)
+            if (images.length > 3) {
+                const carouselContainer = document.createElement('div');
+                carouselContainer.className = 'image-carousel-container';
+                
+                const carousel = document.createElement('div');
+                carousel.className = 'image-carousel';
+                
+                images.forEach((item, index) => {
+                    const slide = document.createElement('div');
+                    slide.className = `carousel-slide ${index === 0 ? 'active' : ''}`;
+                    
+                    const img = document.createElement('img');
+                    img.src = item.url;
+                    img.alt = item.title;
+                    
+                    const caption = document.createElement('div');
+                    caption.className = 'carousel-caption';
+                    caption.innerHTML = `
+                        <h5>${item.title}</h5>
+                        <p>${item.description || ''}</p>
+                    `;
+                    
+                    slide.appendChild(img);
+                    slide.appendChild(caption);
+                    carousel.appendChild(slide);
+                });
+                
+                // Create navigation controls
+                const navContainer = document.createElement('div');
+                navContainer.className = 'carousel-nav';
+                
+                const prevBtn = document.createElement('button');
+                prevBtn.className = 'carousel-btn prev';
+                prevBtn.innerHTML = '‹';
+                prevBtn.setAttribute('aria-label', 'Previous image');
+                
+                const nextBtn = document.createElement('button');
+                nextBtn.className = 'carousel-btn next';
+                nextBtn.innerHTML = '›';
+                nextBtn.setAttribute('aria-label', 'Next image');
+                
+                const dotsContainer = document.createElement('div');
+                dotsContainer.className = 'carousel-dots';
+                
+                images.forEach((_, index) => {
+                    const dot = document.createElement('button');
+                    dot.className = `carousel-dot ${index === 0 ? 'active' : ''}`;
+                    dot.setAttribute('data-slide', index);
+                    dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+                    dotsContainer.appendChild(dot);
+                });
+                
+                const counter = document.createElement('div');
+                counter.className = 'carousel-counter';
+                counter.textContent = `1 / ${images.length}`;
+                
+                navContainer.appendChild(prevBtn);
+                navContainer.appendChild(dotsContainer);
+                navContainer.appendChild(counter);
+                navContainer.appendChild(nextBtn);
+                
+                carouselContainer.appendChild(carousel);
+                carouselContainer.appendChild(navContainer);
+                
+                // Add carousel functionality
+                let currentSlide = 0;
+                
+                function updateCarousel() {
+                    carousel.querySelectorAll('.carousel-slide').forEach((slide, index) => {
+                        slide.classList.toggle('active', index === currentSlide);
+                    });
+                    dotsContainer.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentSlide);
+                    });
+                    counter.textContent = `${currentSlide + 1} / ${images.length}`;
+                }
+                
+                prevBtn.addEventListener('click', () => {
+                    currentSlide = currentSlide > 0 ? currentSlide - 1 : images.length - 1;
+                    updateCarousel();
+                });
+                
+                nextBtn.addEventListener('click', () => {
+                    currentSlide = currentSlide < images.length - 1 ? currentSlide + 1 : 0;
+                    updateCarousel();
+                });
+                
+                dotsContainer.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        currentSlide = index;
+                        updateCarousel();
+                    });
+                });
+                
+                // Keyboard navigation
+                carouselContainer.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') {
+                        prevBtn.click();
+                    } else if (e.key === 'ArrowRight') {
+                        nextBtn.click();
+                    }
+                });
+                
+                imagesSection.appendChild(carouselContainer);
+            } else {
+                // Regular grid for projects with few images
+                const imagesGrid = document.createElement('div');
+                imagesGrid.className = 'images-grid';
+                
+                images.forEach(item => {
+                    const imageWrapper = document.createElement('div');
+                    imageWrapper.className = 'image-item';
+                    
+                    const img = document.createElement('img');
+                    img.src = item.url;
+                    img.alt = item.title;
+                    
+                    const caption = document.createElement('div');
+                    caption.className = 'media-caption';
+                    caption.innerHTML = `
+                        <h5>${item.title}</h5>
+                        <p>${item.description || ''}</p>
+                    `;
+                    
+                    imageWrapper.appendChild(img);
+                    imageWrapper.appendChild(caption);
+                    imagesGrid.appendChild(imageWrapper);
+                });
+                
+                imagesSection.appendChild(imagesGrid);
+            }
             
-            images.forEach(item => {
-                const imageWrapper = document.createElement('div');
-                imageWrapper.className = 'image-item';
-                
-                const img = document.createElement('img');
-                img.src = item.url;
-                img.alt = item.title;
-                
-                const caption = document.createElement('div');
-                caption.className = 'media-caption';
-                caption.innerHTML = `
-                    <h5>${item.title}</h5>
-                    <p>${item.description || ''}</p>
-                `;
-                
-                imageWrapper.appendChild(img);
-                imageWrapper.appendChild(caption);
-                imagesGrid.appendChild(imageWrapper);
-            });
-            
-            imagesSection.appendChild(imagesGrid);
             mediaContainer.appendChild(imagesSection);
         }
         
