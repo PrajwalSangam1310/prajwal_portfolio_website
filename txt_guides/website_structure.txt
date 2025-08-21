@@ -1,0 +1,45 @@
+Portfolio Website Structure
+
+1. Homepage (Intro)
+- Hero section with:
+  - Name + tagline (e.g., "Engineer | Robotics Enthusiast | Innovator")
+  - Call-to-action buttons: Resume, LinkedIn, Contact
+- Short 2–3 line summary about yourself
+
+2. About Me
+- Personal introduction (background, education, interests)
+- Downloadable resume link
+- Contact info (email, LinkedIn)
+
+3. Projects
+Organize by project with:
+- Title & Short Description (problem, approach, result)
+- Visuals (thumbnails, images, embedded videos)
+- Links (GitHub, presentations, documents)
+
+Projects to include:
+  1. Lower Limb Exoskeleton
+     - Images, simulation videos, PPT
+  2. Warehouse Automation
+     - GitHub repo, simulation & real test videos
+  3. VR Controlled Kinovo Robot
+     - 2 POV videos (IRL, Unity3D)
+  4. Maze Solving Robot Simulation
+     - Webots demo video
+
+4. Skills & Tools
+- Robotics frameworks: ROS, Gazebo, Webots, Unity3D
+- Hardware/Prototyping: exoskeleton design, sensors, controllers
+- Software: Python, C++, GitHub
+- Visualization/UI: Touch GUI, VR integration
+
+5. Gallery / Media Highlights
+- Curated highlight reel of images/videos in a grid format
+- Quick previews (hover → play video or enlarge image)
+
+6. Contact
+- Simple form (name, email, message)
+- Links: LinkedIn, Email, Resume download
+
+Suggested Flow:
+Homepage → About Me → Projects → Skills → Gallery → Contact

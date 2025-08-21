@@ -1,0 +1,47 @@
+Work Experience
+
+Orangewood Labs – Robotics Engineer
+Mar 2023 – Feb 2024 (1 Year)
+- Delivered two robot versions with 10+ functionalities, achieving an 8x improvement in speed.
+- Engineered a motion planning algorithm and control architecture, reducing execution time by ~5x.
+- Implemented robot features: spray painting, bin picking, visual inspection, bartending, powder coating.
+- Managed deployments at 5+ client sites, ensuring client satisfaction.
+- Designed and developed customized automated solutions for industry clients.
+- Led 50+ troubleshooting cases for 20+ robots, solving complex technical issues onsite & remotely.
+- Collaborated with 5 multidisciplinary departments to resolve real-time robot challenges.
+- Managed a team of 4 interns, overseeing onboarding, task allocation, and delivery.
+- Presented robotics demos for 5+ marketing campaigns to key stakeholders.
+
+Tools & Skills:
+- Programming & Robotics: Python, C++, ROS, Webots, Arduino
+- Frameworks & Control: Motion planning, Robot control architecture, ESP-IDF
+- Collaboration: Agile methodologies, Cross-functional teamwork
+- Other Skills: Troubleshooting, Client solutions, Technical leadership
+
+
+TCS Research & Innovation Labs – Robotics Researcher
+Sep 2022 – Feb 2023 (6 Months)
+- Designed and validated proof-of-concepts integrating VR with robotic controls.
+- Researched automation trends and identified motion planning opportunities in robotic manipulators.
+
+Tools & Skills:
+- Programming: Python, C, Matlab
+- Frameworks: ROS, Simulink, Simscape
+- Specialization: Virtual Reality integration, Proof-of-concept prototyping
+- Research Skills: Trend analysis, Innovation exploration
+
+
+Personal Initiative – Commute Together (Commuter Connectivity App)
+Mar 2024 – Jun 2024 (3 Months)
+- Researched commuter needs via observations, Reddit insights, surveys, and academic studies.
+- Designed and iterated on features: route-based user matching, commute feed, guided meetups, gamified engagement.
+- Conducted competitive benchmarking against Yubo & Meetup to define unique value.
+- Conducted 20+ user interviews and 100+ surveys to validate pain points.
+- Built a safety-first UX to avoid overlap with dating apps.
+- Proposed a long-term product vision: micro-communities + monetization via brand partnerships.
+
+Tools & Skills:
+- Product & Design: Figma, Wireframing, Product thinking frameworks (JTBD, AARRR)
+- Research: User research, Surveys, Competitive analysis
+- Product Strategy: MVP scoping, Road-mapping, Feature prioritization
+- Engagement Techniques: Gamification, Retention strategies

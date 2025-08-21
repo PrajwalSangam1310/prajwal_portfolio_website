@@ -1,0 +1,9 @@
+Image order in the carrousal
+1. mood_selection_screen.png
+2. energy selection scree.png
+3. ambient sound selection screen.png
+4. mood_radio.png
+5. learning nugget.png
+6. more thana tune_what we felt.png
+7. music_jouornal.png
+8. my_learnings.png

@@ -1,0 +1,92 @@
+Project Summaries for Portfolio Website
+
+1. Robotic Exoskeleton (DRDO Sponsored)
+What it is:
+A wearable assistive device designed to support the lower limbs of people with spinal injuries, enabling mobility and rehabilitation.
+
+Your Contributions:
+- Played a central role across electronics, UI/UX, and software design.
+- Drove project progress from ~10% to ~85% completion in 6 months.
+- Coordinated junior recruitment & training, ensuring knowledge transfer.
+- Secured ₹10+ lakh DRDO funding and delivered project management excellence.
+- Recognized with a ₹15k award for outstanding contributions.
+
+Skills Highlighted:
+- Robotics design, embedded systems, UI/UX for hardware, leadership, fundraising, cross-functional project management.
+
+Tools & Skills Used:
+- Tools: Arduino, ESP-IDF, ROS, Simulink, CAD tools
+- Skills: Motion control, system integration, embedded programming, electronics prototyping, project coordination
+
+
+2. Warehouse Automation – Flipkart Grid 3.0 Challenge
+What it is:
+A robotics system for efficient warehouse operations, designed for scalability and cost-effectiveness.
+
+Your Contributions:
+- Led a 10-member cross-disciplinary team (EC, ME, EE, CS) to reach Top 46 out of 9549 teams in Flipkart’s national automation challenge.
+- Innovated a low-cost robot (₹1.5k/unit) while cutting robot dimensions by 50%, enhancing deployment feasibility.
+- Successfully managed remote collaboration during the pandemic, ensuring delivery under constraints.
+
+Skills Highlighted:
+- Team leadership, cost optimization, robotics design, simulation (ROS/Gazebo), real-world deployment readiness.
+
+Tools & Skills Used:
+- Tools: ROS, Gazebo, Python, C++, GitHub, CAD tools
+- Skills: Algorithm design, path planning, computer vision, robotics system simulation, teamwork, cost engineering
+
+
+3. VR-Controlled Kinova Robot (TCS Research Labs)
+What it is:
+A research initiative exploring VR-robotics integration for intuitive teleoperation of robotic manipulators.
+
+Your Contributions:
+- Designed and validated proof-of-concepts integrating VR with robotic controls.
+- Identified motion planning opportunities in manipulators by studying industry-wide automation trends.
+- Collaborated across disciplines to explore novel HCI (human-computer interaction) solutions.
+
+Skills Highlighted:
+- VR-robotics integration, motion planning, proof-of-concept development, research methodology.
+
+Tools & Skills Used:
+- Tools: Unity3D, VR Headsets, ROS, Python, C++
+- Skills: Teleoperation, VR interface design, kinematics, motion planning, research documentation
+
+
+4. Commute Together – Social Commuting App (Personal Initiative)
+What it is:
+A mobile app designed to connect commuters traveling similar routes, fostering micro-communities and social engagement.
+
+Your Contributions:
+- Identified the latent commuter need for social connection via observational research, surveys, and Reddit insights.
+- Conducted 20+ interviews and 100+ surveys to validate pain points.
+- Designed features like route-based user matching, commute neighbor feed, gamified engagement, and guided meetups.
+- Benchmarked against Yubo/Meetup to ensure differentiation while avoiding dating-app overlaps through safety-first UX design.
+- Crafted a long-term product vision including monetization via brand partnerships and location-based rewards.
+
+Skills Highlighted:
+- Product design, user research, competitive benchmarking, feature ideation, growth strategy, UX positioning.
+
+Tools & Skills Used:
+- Tools: Figma, Flutter, SQL, Survey tools (Google Forms, Typeform)
+- Skills: Wireframing, UX research, competitive analysis, MVP scoping, product visioning, gamification design
+
+
+5. Spotify Song Recommendations Case Study (Academic/Personal Project)
+What it is:
+A product case study aimed at solving user dissatisfaction with Spotify’s recommendation algorithm.
+
+Your Contributions:
+- Conducted root cause analysis of recommendation dissatisfaction.
+- Proposed new product directions like:
+  - “Moments made by music”
+  - Post-listening reflection
+  - Learning from active listeners
+- Applied product frameworks like JTBD, AARRR funnel, emotional/functional value mapping.
+
+Skills Highlighted:
+- Product strategy, JTBD analysis, customer journey mapping, applying frameworks to real-world problems.
+
+Tools & Skills Used:
+- Tools: Figma (for mapping journeys), Excel/Sheets (data analysis), Miro (framework visualization)
+- Skills: JTBD framework, AARRR funnel analysis, emotional/functional value mapping, product storytelling

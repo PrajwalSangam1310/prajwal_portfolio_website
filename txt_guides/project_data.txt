@@ -1,0 +1,36 @@
+
+Techinical Projects links
+
+Lower limb exoskeleton
+- Images
+--- Assembled exoskeleton - https://drive.google.com/file/d/1VWmyZkGtxPRwL_VHuxf_CKyeLWIZYoaj/view?usp=drive_link
+--- Hand held touch gui - https://drive.google.com/file/d/1utw4nSOVPL_uTgyzwEz0lQK-30GR2VoM/view?usp=drive_link
+--- Exoskeleton worn - https://drive.google.com/file/d/1HYQhRT4a0kfX92Mxlyjj6vm_cG3J8_49/view?usp=drive_link
+
+-Video links
+--- Exoskeleton gazebo simulation - https://youtu.be/Bf7scwYO3I8
+--- Partially assembled test run - https://www.youtube.com/shorts/WopZB1Y2_4U?feature=share 
+
+- Misc
+--- PPT presentation about the project - https://docs.google.com/presentation/d/1YUNAixY1DiFZOgK3bLr4iF2NqlXdP2iZ/edit?usp=drive_link&ouid=114094306082124030494&rtpof=true&sd=true
+
+
+Warehouse automation 
+- github - https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2FPrajwalSangam1310%2Fgrid3&sa=D&sntz=1&usg=AOvVaw1LAYaQo_m8nEtaM9Epv1o4
+- Video Links
+--- Gazebo simulation to check code and algorithm integrity - https://youtu.be/rNKWYwnxnPM
+--- Real recording camera view - https://youtu.be/mN9d7y8wYKw
+--- Screen recording of the session, image processing live feed, live working of all the parts of the ros package - https://youtu.be/CXt-miu23wM
+
+VR controlled Kinovo Robot 
+
+Video links
+- VR controlled Kinovo Robot, IRL POV - https://youtu.be/esM6quBwEWM
+- VR controlled kinovo robot, unity3D pov - https://youtu.be/8pNhq5KUX2Q
+
+
+
+Maze solving robot weebots simulation 
+
+Video links
+- Maze solving robot simulation in weebots -  - https://youtu.be/NGkI8S_1u90

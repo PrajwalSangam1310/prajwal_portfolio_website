@@ -1,0 +1,42 @@
+Portfolio Projects Section - Layout and UI Elements
+
+1. Project Gallery Overview (Grid or Card Layout)
+- Responsive grid of project cards (2–3 columns).
+- Each card includes:
+  - Thumbnail image (robot in action, app UI, case study diagram).
+  - Project Title + Tagline (e.g., "Robotic Exoskeleton – Assistive Wearable for Mobility").
+  - 2–3 line teaser about what the project is.
+  - Quick tags (skills/tools) displayed as colored pills (e.g., ROS, Figma, Python).
+- Interaction: Hover effect highlights card, reveals "View More" button.
+
+2. Detailed Project Page / Modal (when a card is clicked)
+Hero Section (Top):
+- Banner image or looping GIF/video.
+- Project title + one-liner about its impact.
+
+Project Breakdown (Sections stacked vertically):
+1. What it is → 2–3 lines describing the project purpose.
+2. Your Contributions → bullets in checklist style.
+3. Skills & Tools → badges (Python, ROS, Figma, etc.).
+4. Media Gallery → embedded YouTube video, image carousel, or slides.
+5. Outcome/Impact → highlight numbers ("85% completion in 6 months", "Top 46 out of 9549 teams").
+
+UI Elements:
+- Vertical timeline style OR collapsible sections for easy scanning.
+- Sticky sidebar with “Quick Links” → GitHub | Video | Presentation | Report.
+
+3. Cross-Project Elements
+- Filters/Tags: Allow filtering by category (Robotics, Product, Research).
+- Highlight Reel: Separate "Showcase" with 1–2 standout projects displayed larger with auto-playing video.
+
+4. Visual Cues
+- Iconography to differentiate projects: 🤖 (robotics), 📱 (apps), 🎵 (product case study).
+- Color-coded tags:
+  - Tech Skills (blue)
+  - Product/Design (green)
+  - Research (purple)
+
+Overall Flow:
+- First glance clarity through project grid with visuals and tags.
+- Deeper dive into details with full project page or modal.
+- Strong skills emphasis using pill-shaped tags and media embeds.
