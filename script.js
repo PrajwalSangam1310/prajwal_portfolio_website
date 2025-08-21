@@ -363,6 +363,65 @@ const addLoadingAnimation = () => {
 // Initialize loading animation
 addLoadingAnimation();
 
+// Skill categorization for color coding
+const skillCategories = {
+    robotics: [
+        'ROS', 'Motion Control', 'Robot Control', 'Sensors', 'CAD', 'System Integration',
+        'Embedded Systems', 'ESP-IDF', 'Webots', 'Gazebo', 'Simulink', 'Simscape',
+        'VR Headsets', 'VR Integration', 'Motion Planning', 'Arduino', 'CAD Design',
+        'Teleoperation', 'Kinematics', 'Research & Development'
+    ],
+    software: [
+        'Python', 'C++', 'C', 'Matlab', 'SQL', 'Git & GitHub', 'Unity3D',
+        'Algorithm Design', 'Computer Vision', 'Path Planning', 'System Simulation',
+        'Cost Engineering', 'GitHub', 'Flutter', 'Excel', 'Miro', 'System Design',
+        'Remote Collaboration', 'Competition Strategy', 'Data Analysis'
+    ],
+    product: [
+        'Product Design', 'User Research', 'Product Strategy', 'UI/UX Design', 'Figma',
+        'Competitive Analysis', 'MVP Scoping', 'JTBD Framework', 'AARRR', 'AARRR Funnel',
+        'Agile Methodologies', 'Team Leadership', 'Project Management', 'Gamification',
+        'Client Solutions', 'Research', 'UX Research', 'Product Thinking Frameworks',
+        'Wireframing', 'Road-mapping', 'Feature Prioritization', 'Retention Strategies',
+        'Customer Journey Mapping', 'Product Storytelling', 'Agile Methods'
+    ]
+};
+
+// Function to get skill category
+function getSkillCategory(skill) {
+    const normalizedSkill = skill.trim();
+    
+    if (skillCategories.robotics.includes(normalizedSkill)) return 'robotics';
+    if (skillCategories.software.includes(normalizedSkill)) return 'software';  
+    if (skillCategories.product.includes(normalizedSkill)) return 'product';
+    
+    return 'default';
+}
+
+// Function to apply skill colors on page load
+function applySkillColors() {
+    // Color experience tags
+    document.querySelectorAll('.exp-tag').forEach(tag => {
+        const category = getSkillCategory(tag.textContent);
+        tag.classList.add(`skill-${category}`);
+    });
+    
+    // Color project tags
+    document.querySelectorAll('.tag').forEach(tag => {
+        const category = getSkillCategory(tag.textContent);
+        tag.classList.add(`skill-${category}`);
+    });
+    
+    // Color main skills section tags
+    document.querySelectorAll('.skill-tag').forEach(tag => {
+        const category = getSkillCategory(tag.textContent);
+        tag.classList.add(`skill-${category}`);
+    });
+}
+
+// Apply colors when page loads
+document.addEventListener('DOMContentLoaded', applySkillColors);
+
 // Project Modal Functionality
 const projectData = {
     exoskeleton: {
@@ -622,7 +681,8 @@ function populateModal(project) {
     skillsContainer.innerHTML = '';
     project.skills.forEach(skill => {
         const skillTag = document.createElement('span');
-        skillTag.className = 'tag';
+        const category = getSkillCategory(skill);
+        skillTag.className = `tag skill-${category}`;
         skillTag.textContent = skill;
         skillsContainer.appendChild(skillTag);
     });
