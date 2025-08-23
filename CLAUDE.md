@@ -62,7 +62,6 @@ The website uses a content-driven approach where specifications are maintained i
 ### Hobbies & Interests Section
 - **Reading Habit**: Masonry grid display of book covers with Goodreads integration
 - **Writing**: Medium profile integration with article highlights
-- **Love for Art**: Masonry gallery showcasing personal artwork with Pinterest integration
 - All sections include direct links to external profiles and platforms
 
 ### Dynamic Skill Categorization
@@ -104,7 +103,6 @@ Simply open `index.html` in any modern web browser - no build process required.
 ### Asset Management
 - **Project images**: `resources/project-images/{project-name}/`
 - **Book covers**: `resources/books images/` - Book cover images for reading section
-- **Artwork**: `resources/art_work/` - Personal artwork displayed in masonry gallery
 - **Thumbnails**: Used for project card displays
 - **Media organization**: Separate folders for different project types
 - **Image optimization**: Maintain consistent aspect ratios
@@ -113,7 +111,6 @@ Simply open `index.html` in any modern web browser - no build process required.
 - **Miro Boards**: Direct links to research process documentation
 - **Goodreads Profile**: Book collection and reading history
 - **Medium Profile**: Published articles and writing samples
-- **Pinterest Profile**: Artwork gallery and creative portfolio
 - **LinkedIn**: Professional networking and career information
 - **GitHub**: Technical projects and code repositories
 - **Email**: Direct contact integration with mailto: links
