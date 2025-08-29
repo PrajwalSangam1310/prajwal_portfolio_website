@@ -383,7 +383,8 @@ const skillCategories = {
         'Agile Methodologies', 'Team Leadership', 'Project Management', 'Gamification',
         'Client Solutions', 'Research', 'UX Research', 'Product Thinking Frameworks',
         'Wireframing', 'Road-mapping', 'Feature Prioritization', 'Retention Strategies',
-        'Customer Journey Mapping', 'Product Storytelling', 'Agile Methods'
+        'Customer Journey Mapping', 'Product Storytelling', 'Agile Methods', 'PRD Writing',
+        'Mobile UX Design', 'Product Execution'
     ]
 };
 
@@ -554,30 +555,127 @@ const projectData = {
         ]
     },
     commute: {
-        title: "Commute Together App",
-        subtitle: "Social Commuting Product Design Initiative",
-        badges: ["Product Management", "Featured", "User Research"],
-        description: "A comprehensive mobile application concept designed to transform daily commuting into meaningful social experiences. Through extensive user research and strategic product design, this initiative addresses the latent need for social connection among urban commuters while maintaining safety and user comfort.",
+        title: "CommuteWell",
+        subtitle: "React Native Social Commuting Platform - From PRD to Implementation",
+        badges: ["Product Management", "Featured", "React Native Implementation", "User Research"],
+        description: "Evolution of a comprehensive mobile application from strategic product concept to functional React Native implementation. This project demonstrates end-to-end product ownership, from extensive user research and PRD development to building a working mobile app with 16+ screens and complete user flows for social commuting.",
         contributions: [
-            "Conducted extensive user research including 20+ in-depth interviews and 100+ comprehensive surveys",
-            "Identified and validated latent user needs through observational research and Reddit community insights",
-            "Designed complete feature ecosystem including route-based matching, neighbor feeds, and gamified engagement",
-            "Performed competitive analysis against Yubo and Meetup to ensure market differentiation",
-            "Developed comprehensive product vision with monetization strategy through brand partnerships and location-based rewards"
+            "Authored comprehensive Product Requirements Document with detailed technical specifications and user research validation",
+            "Successfully implemented functional React Native mobile application with complete user onboarding and core feature flows",
+            "Evolved product from initial concept through extensive user research to working prototype with 16+ functional screens",
+            "Applied advanced product frameworks (JTBD, AARRR, Problem Framing Canvas) for strategic validation and feature prioritization",
+            "Created safety-first UX architecture for gradual relationship building, avoiding dating app misconceptions through thoughtful design"
         ],
-        skills: ["Product Design", "User Research", "Figma", "Flutter", "SQL", "UX Research", "Competitive Analysis", "MVP Scoping", "Product Strategy", "Gamification Design"],
+        skills: ["Product Design", "User Research", "PRD Writing", "Mobile UX Design", "Figma", "UX Research", "Competitive Analysis", "MVP Scoping", "Product Strategy", "Product Execution"],
         impacts: [
-            "Validated significant market opportunity in social commuting space through data-driven research",
-            "Created safety-first UX design framework to avoid dating app misconceptions",
-            "Established clear product-market fit through extensive user validation",
-            "Developed scalable monetization model with multiple revenue streams",
-            "Generated comprehensive product roadmap suitable for investor presentations"
+            "Successfully delivered functional mobile app demonstrating end-to-end product ownership from concept to implementation",
+            "Validated market opportunity targeting 25M+ university students through comprehensive user research and strategic analysis",
+            "Designed scalable technical architecture supporting social networking features with safety-first community building approach",
+            "Created comprehensive go-to-market strategy with university partnership framework and clear monetization pathways",
+            "Demonstrated practical application of advanced product management frameworks in real-world product development"
         ],
         media: [
             {
                 type: "video",
-                title: "Product Concept Presentation",
-                url: "" // Add your presentation video URL here
+                title: "CommuteWell App Demo",
+                description: "Complete React Native app walkthrough showing user onboarding, social feeds, profile matching, and core functionality",
+                url: "resources/project-images/commute_well/commute_well_demo.webm"
+            },
+            {
+                type: "image",
+                title: "User Authentication - Sign In",
+                description: "Clean sign-in interface with golden branding and social login integration",
+                url: "resources/project-images/commute_well/signin_screen.png"
+            },
+            {
+                type: "image",
+                title: "User Registration Flow",
+                description: "Streamlined registration process with username and password setup",
+                url: "resources/project-images/commute_well/sign_up_screen.png"
+            },
+            {
+                type: "image",
+                title: "Welcome & Onboarding",
+                description: "Engaging welcome screen introducing users to CommuteWell's core value propositions",
+                url: "resources/project-images/commute_well/welcome_screen.png"
+            },
+            {
+                type: "image",
+                title: "Personal Information Setup",
+                description: "User profile configuration for personalized commuting experience",
+                url: "resources/project-images/commute_well/personal_info_screen.png"
+            },
+            {
+                type: "image",
+                title: "Extended Profile Setup",
+                description: "Detailed user preferences and safety settings configuration",
+                url: "resources/project-images/commute_well/personal_info_screen2.png"
+            },
+            {
+                type: "image",
+                title: "Commute Route Configuration",
+                description: "Route setup interface for matching users with similar commute patterns",
+                url: "resources/project-images/commute_well/comute_info1.png"
+            },
+            {
+                type: "image",
+                title: "Advanced Commute Preferences",
+                description: "Detailed commute timing and preference settings for optimal matching",
+                url: "resources/project-images/commute_well/commute_info2.png"
+            },
+            {
+                type: "image",
+                title: "Commute Progress Tracking",
+                description: "Gamified progress system with ride points and community theme park contribution",
+                url: "resources/project-images/commute_well/commute_screen1.png"
+            },
+            {
+                type: "image",
+                title: "Daily Commute Dashboard",
+                description: "Progress visualization with achievement tracking and community engagement metrics",
+                url: "resources/project-images/commute_well/commute_screen2.png"
+            },
+            {
+                type: "image",
+                title: "Community Investment Interface",
+                description: "Theme park contribution system encouraging community participation and investment",
+                url: "resources/project-images/commute_well/commute_screen3.png"
+            },
+            {
+                type: "image",
+                title: "Social Feed - Community Updates",
+                description: "Dynamic community feed showing group rides, route updates, and neighbor interactions",
+                url: "resources/project-images/commute_well/feeds_screen1.png"
+            },
+            {
+                type: "image",
+                title: "Social Feed - Group Activities",
+                description: "Group ride announcements and community event coordination interface",
+                url: "resources/project-images/commute_well/fedscreen2.png"
+            },
+            {
+                type: "image",
+                title: "Social Feed - Route Information",
+                description: "Real-time route updates and community-shared traffic information",
+                url: "resources/project-images/commute_well/feedscreen3.png"
+            },
+            {
+                type: "image",
+                title: "Profile Discovery - Know Your Neighbors",
+                description: "Neighbor discovery with compatibility scoring and university verification",
+                url: "resources/project-images/commute_well/profiles_screen1.png"
+            },
+            {
+                type: "image",
+                title: "User Interactions - Group Coordination",
+                description: "Group ride management with participant tracking and coordination features",
+                url: "resources/project-images/commute_well/interactions_screen1.png"
+            },
+            {
+                type: "image",
+                title: "User Interactions - Communication Hub",
+                description: "Message center and ongoing conversation management for community building",
+                url: "resources/project-images/commute_well/interactions2.png"
             }
         ]
     },
