@@ -2168,3 +2168,206 @@ body {
 .hobby-link i {
     font-size: 1.2rem;
 }
+
+/* Mobile App Gallery Styles */
+.mobile-app-gallery {
+    margin: 2rem 0;
+}
+
+.app-flow-section {
+    margin-bottom: 3rem;
+}
+
+.app-flow-section:last-child {
+    margin-bottom: 0;
+}
+
+.app-flow-title {
+    color: #0c1321;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding: 0.8rem 1.2rem;
+    background: linear-gradient(135deg, rgba(255, 177, 0, 0.1) 0%, rgba(255, 177, 0, 0.05) 100%);
+    border-left: 4px solid #ffb100;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.app-flow-title::before {
+    content: '📱';
+    font-size: 1.2rem;
+}
+
+.mobile-screens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.mobile-screen-item {
+    position: relative;
+    max-width: 300px;
+    transition: all 0.3s ease;
+}
+
+.mobile-screen-item:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Phone Frame Mockup */
+.phone-frame {
+    position: relative;
+    width: 280px;
+    height: 560px;
+    background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+    border-radius: 35px;
+    padding: 20px 15px;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 8px 24px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+}
+
+.phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: #333;
+    border-radius: 2px;
+}
+
+.phone-frame::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 4px;
+    background: #333;
+    border-radius: 2px;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+    background: #000;
+    position: relative;
+}
+
+.phone-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.mobile-screen-item:hover .phone-screen img {
+    transform: scale(1.05);
+}
+
+.mobile-screen-caption {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 0 1rem;
+}
+
+.mobile-screen-caption h5 {
+    color: #0c1321;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.mobile-screen-caption p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* App Flow Icons */
+.app-flow-section[data-flow="authentication"] .app-flow-title::before {
+    content: '🔐';
+}
+
+.app-flow-section[data-flow="onboarding"] .app-flow-title::before {
+    content: '👋';
+}
+
+.app-flow-section[data-flow="setup"] .app-flow-title::before {
+    content: '⚙️';
+}
+
+.app-flow-section[data-flow="core"] .app-flow-title::before {
+    content: '🎯';
+}
+
+.app-flow-section[data-flow="social"] .app-flow-title::before {
+    content: '👥';
+}
+
+.app-flow-section[data-flow="interactions"] .app-flow-title::before {
+    content: '💬';
+}
+
+/* Responsive Design for Mobile App Gallery */
+@media (max-width: 768px) {
+    .mobile-screens-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .phone-frame {
+        width: 240px;
+        height: 480px;
+        padding: 15px 12px;
+        border-radius: 30px;
+    }
+    
+    .phone-screen {
+        border-radius: 20px;
+    }
+    
+    .phone-screen img {
+        border-radius: 20px;
+    }
+    
+    .app-flow-title {
+        font-size: 1.2rem;
+        padding: 0.6rem 1rem;
+    }
+    
+    .mobile-screen-caption h5 {
+        font-size: 1rem;
+    }
+    
+    .mobile-screen-caption p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-screens-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .phone-frame {
+        width: 220px;
+        height: 440px;
+    }
+}

@@ -822,13 +822,131 @@ function populateModal(project) {
         
         // Create Images section
         if (images.length > 0) {
-            const imagesSection = document.createElement('div');
-            imagesSection.className = 'media-section';
+            // Check if this is a mobile app project (CommuteWell)
+            const isMobileApp = project.title === 'CommuteWell' || project.subtitle.includes('React Native');
             
-            const imagesTitle = document.createElement('h4');
-            imagesTitle.textContent = 'Feature Designs';
-            imagesTitle.className = 'media-section-title';
-            imagesSection.appendChild(imagesTitle);
+            if (isMobileApp) {
+                // Create Mobile App Gallery
+                const mobileGallery = document.createElement('div');
+                mobileGallery.className = 'media-section mobile-app-gallery';
+                
+                const galleryTitle = document.createElement('h4');
+                galleryTitle.textContent = 'App Interface Showcase';
+                galleryTitle.className = 'media-section-title';
+                mobileGallery.appendChild(galleryTitle);
+                
+                // Define app flow sections
+                const appFlows = [
+                    {
+                        name: 'Authentication Flow',
+                        flow: 'authentication',
+                        screens: images.filter(img => 
+                            img.title.includes('Sign In') || 
+                            img.title.includes('Registration') || 
+                            img.title.includes('Welcome')
+                        )
+                    },
+                    {
+                        name: 'User Onboarding',
+                        flow: 'onboarding',
+                        screens: images.filter(img => 
+                            img.title.includes('Personal Information') ||
+                            img.title.includes('Profile Setup')
+                        )
+                    },
+                    {
+                        name: 'Commute Setup',
+                        flow: 'setup',
+                        screens: images.filter(img => 
+                            img.title.includes('Commute Route') ||
+                            img.title.includes('Commute Preferences')
+                        )
+                    },
+                    {
+                        name: 'Gamification & Community Building',
+                        flow: 'core',
+                        screens: images.filter(img => 
+                            img.title.includes('Commute Progress') ||
+                            img.title.includes('Dashboard') ||
+                            img.title.includes('Community Investment')
+                        )
+                    },
+                    {
+                        name: 'Social Features',
+                        flow: 'social',
+                        screens: images.filter(img => 
+                            img.title.includes('Social Feed') ||
+                            img.title.includes('Profile Discovery')
+                        )
+                    },
+                    {
+                        name: 'User Interactions',
+                        flow: 'interactions',
+                        screens: images.filter(img => 
+                            img.title.includes('User Interactions') ||
+                            img.title.includes('Communication')
+                        )
+                    }
+                ];
+                
+                // Create each app flow section
+                appFlows.forEach(flowData => {
+                    if (flowData.screens.length > 0) {
+                        const flowSection = document.createElement('div');
+                        flowSection.className = 'app-flow-section';
+                        flowSection.setAttribute('data-flow', flowData.flow);
+                        
+                        const flowTitle = document.createElement('h5');
+                        flowTitle.className = 'app-flow-title';
+                        flowTitle.textContent = flowData.name;
+                        flowSection.appendChild(flowTitle);
+                        
+                        const screensGrid = document.createElement('div');
+                        screensGrid.className = 'mobile-screens-grid';
+                        
+                        flowData.screens.forEach(screen => {
+                            const screenItem = document.createElement('div');
+                            screenItem.className = 'mobile-screen-item';
+                            
+                            const phoneFrame = document.createElement('div');
+                            phoneFrame.className = 'phone-frame';
+                            
+                            const phoneScreen = document.createElement('div');
+                            phoneScreen.className = 'phone-screen';
+                            
+                            const img = document.createElement('img');
+                            img.src = screen.url;
+                            img.alt = screen.title;
+                            
+                            const caption = document.createElement('div');
+                            caption.className = 'mobile-screen-caption';
+                            caption.innerHTML = `
+                                <h5>${screen.title}</h5>
+                                <p>${screen.description || ''}</p>
+                            `;
+                            
+                            phoneScreen.appendChild(img);
+                            phoneFrame.appendChild(phoneScreen);
+                            screenItem.appendChild(phoneFrame);
+                            screenItem.appendChild(caption);
+                            screensGrid.appendChild(screenItem);
+                        });
+                        
+                        flowSection.appendChild(screensGrid);
+                        mobileGallery.appendChild(flowSection);
+                    }
+                });
+                
+                mediaContainer.appendChild(mobileGallery);
+            } else {
+                // Regular image gallery for non-mobile app projects
+                const imagesSection = document.createElement('div');
+                imagesSection.className = 'media-section';
+                
+                const imagesTitle = document.createElement('h4');
+                imagesTitle.textContent = 'Feature Designs';
+                imagesTitle.className = 'media-section-title';
+                imagesSection.appendChild(imagesTitle);
             
             // Create carousel for projects with multiple images (like Spotify)
             if (images.length > 3) {
@@ -963,7 +1081,8 @@ function populateModal(project) {
                 imagesSection.appendChild(imagesGrid);
             }
             
-            mediaContainer.appendChild(imagesSection);
+                mediaContainer.appendChild(imagesSection);
+            }
         }
         
         // Create Miro Board section
